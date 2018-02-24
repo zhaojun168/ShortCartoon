@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "D:\\AndroidStudioProjects\\DailyReading-master\\DailyReading-master\\dZJ_LIB\\build\\intermediates\\res\\merged\\release\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\AndroidStudioProjects\\DailyReading-master\\DailyReading-master\\dZJ_LIB\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\DailyReading-master\\DailyReading-master\\dZJ_LIB\\build\\intermediates\\res\\merged\\release\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "D:\\AndroidStudioProjects\\DailyReading-master\\DailyReading-master\\dZJ_LIB\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ShortCartoon\\dZJ_LIB\\build\\intermediates\\res\\merged\\release\\layout\\pull_to_refresh_header_horizontal.xml",
+        "source": "D:\\AndroidStudioProjects\\ShortCartoon\\dZJ_LIB\\src\\main\\res\\layout\\pull_to_refresh_header_horizontal.xml"
+    },
+    {
+        "merged": "D:\\AndroidStudioProjects\\ShortCartoon\\dZJ_LIB\\build\\intermediates\\res\\merged\\release\\layout\\pull_to_refresh_header_vertical.xml",
+        "source": "D:\\AndroidStudioProjects\\ShortCartoon\\dZJ_LIB\\src\\main\\res\\layout\\pull_to_refresh_header_vertical.xml"
+    }
+]

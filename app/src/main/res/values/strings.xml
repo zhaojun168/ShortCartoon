@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ShortCartoon</string>
+    <string name="main_cartoon">漫画</string>
+    <string name="main_two">等待1</string>
+    <string name="main_three">等待2</string>
+
+</resources>
