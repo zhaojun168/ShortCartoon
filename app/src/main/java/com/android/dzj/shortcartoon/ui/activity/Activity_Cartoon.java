@@ -20,7 +20,11 @@ import android.view.ViewGroup;
 //import android.widget.RadioGroup.OnCheckedChangeListener;
 //import android.widget.RelativeLayout;
 //
+import com.android.callback.ConnectionCallback;
 import com.android.dzj.shortcartoon.R;
+import com.android.dzj.shortcartoon.connector.CartoonConnector;
+import com.android.dzj.shortcartoon.entity.Cartoon_Json;
+import com.android.util.UiUtils;
 //import com.android.dzj.app.dailyreading.article.activity.Eight_Activity;
 //import com.android.dzj.app.dailyreading.article.activity.Eighteen_Activity;
 //import com.android.dzj.app.dailyreading.article.activity.Eleven_Activity;
@@ -49,6 +53,7 @@ public class Activity_Cartoon extends Fragment {
 	
 	private View mView;
 	private Activity_Main mContext;
+	private CartoonConnector mConnector;
 //	private RelativeLayout rl_nav;
 //	private SyncHorizontalScrollView mHsv;
 //	private RadioGroup rg_nav_content;
@@ -68,6 +73,7 @@ public class Activity_Cartoon extends Fragment {
 		if (mView == null) {
 			mContext = (Activity_Main) getActivity();
 			mView = inflater.inflate(R.layout.activity_cartoon, null);
+			initView();
 		}
 		ViewGroup group = (ViewGroup) mView.getParent();
 		if (group != null) {
@@ -75,6 +81,25 @@ public class Activity_Cartoon extends Fragment {
 		}
 		return mView;
 	}
+
+	private void initView(){
+		mConnector = new CartoonConnector(mContext);
+		mConnector.getArticleList(callback_firstload, 1, "/category/weimanhua/kbmh", true, "");
+	}
+
+	ConnectionCallback callback_firstload = new ConnectionCallback() {
+		@Override
+		public void result(Object obj) {
+			Cartoon_Json json = (Cartoon_Json) obj;
+			if (null != json && null != json.showapi_res_body) {
+
+			}
+			if (null != json && !json.showapi_res_error.equals("")) {
+				UiUtils.toast(mContext, json.showapi_res_error);
+			}
+		}
+	};
+
 //
 //	private void initView(){
 //		rl_nav = (RelativeLayout) mView.findViewById(R.id.rl_nav);
