@@ -4,11 +4,13 @@ package com.android.dzj.shortcartoon.ui.activity;
 import android.content.Context;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.view.KeyEvent;
 import android.view.View;
 import android.widget.RadioButton;
 
 import com.android.dzj.shortcartoon.R;
 import com.android.ui.activity.BaseActivity;
+import com.android.util.UiUtils;
 
 /**
  * Created by Administrator on 2018/2/24.
@@ -114,19 +116,19 @@ public class Activity_Main extends BaseActivity {
     /**
      * 再按一次退出
      */
-//    public boolean onKeyDown(int keyCode, KeyEvent event) {
-//        if (keyCode == KeyEvent.KEYCODE_BACK
-//                && event.getAction() == KeyEvent.ACTION_DOWN) {
-//            if ((System.currentTimeMillis() - exitTime) > 2000) {
-//                UiUtils.toast(mContext, "再按一次退出");
-//                exitTime = System.currentTimeMillis();
-//            } else {
-//                finish();
-//            }
-//            return true;
-//        }
-//        return super.onKeyDown(keyCode, event);
-//    }
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if (keyCode == KeyEvent.KEYCODE_BACK
+                && event.getAction() == KeyEvent.ACTION_DOWN) {
+            if ((System.currentTimeMillis() - exitTime) > 2000) {
+                UiUtils.toast(mContext, "再按一次退出");
+                exitTime = System.currentTimeMillis();
+            } else {
+                finish();
+            }
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 
     @Override
     protected void onRelease() {
